@@ -2,8 +2,6 @@
 
 print_r($_POST);
 
-
-
 $user = "u2364565_read_bl";
 $pass = "55zx25kp3!";
 
@@ -13,17 +11,17 @@ addPreviewBlog($db);
 
 function addPreviewBlog($_db){
     $post_category = trim($_POST['category']);
-$post_user_name = trim($_POST['user_name']);
-$post_user_avatar = trim($_POST['user_avatar']);
-$post_date_publish = trim($_POST['date_publish']);
-$post_image_preview = trim($_POST['image_preview']);
-$post_name_blog = trim($_POST['name_blog']);
-$post_description_blog = trim($_POST['description_blog']);
-$post_time_view = trim($_POST['time_view']);
-$post_like_count = trim($_POST['like_count']);
-$post_comment_count = trim($_POST['comment_count']);
-$post_repost_count = trim($_POST['repost_count']);
-$post_tags = trim($_POST['tags']);
+    $post_user_name = trim($_POST['user_name']);
+    $post_user_avatar = trim($_POST['user_avatar']);
+    $post_date_publish = trim($_POST['date_publish']);
+    $post_image_preview = trim($_POST['image_preview']);
+    $post_name_blog = trim($_POST['name_blog']);
+    $post_description_blog = trim($_POST['description_blog']);
+    $post_time_view = trim($_POST['time_view']);
+    $post_like_count = trim($_POST['like_count']);
+    $post_comment_count = trim($_POST['comment_count']);
+    $post_repost_count = trim($_POST['repost_count']);
+    $post_tags = trim($_POST['tags']);
 
     $sql = "INSERT INTO blogs(category, user_name, user_avatar,
     date_publish, image_preview, name_blog, description_blog,
@@ -31,19 +29,6 @@ $post_tags = trim($_POST['tags']);
     VALUES(:m_category, :m_user_name, :m_user_avatar, :m_date_publish,
     :m_image_preview, :m_name_blog, :m_desc_blog, :m_time_view, 
     :m_like_count, :m_comment_count, :m_repost_count, :m_tags)";
-
-
-    // $sql = "INSERT INTO blogs() VALUES()";
-    // $sql = "INSERT INTO blogs() VALUES()";
-    // $sql = "INSERT INTO blogs() VALUES()";
-    // $sql = "INSERT INTO blogs() VALUES()";
-    // $sql = "INSERT INTO blogs() VALUES()";
-    // $sql = "INSERT INTO blogs() VALUES()";
-    // $sql = "INSERT INTO blogs() VALUES()";
-    // $sql = "INSERT INTO blogs() VALUES()";
-    // $sql = "INSERT INTO blogs() VALUES()";
-    // $sql = "INSERT INTO blogs() VALUES()";
-    // $sql = "INSERT INTO blogs() VALUES()";
 
     $stmt = $_db -> prepare($sql);
 
