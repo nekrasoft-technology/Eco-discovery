@@ -1,0 +1,17 @@
+{
+    "lang": "ru",
+    "name": "Эко открытие",
+    "short_name": "Эко открытие",
+    "description": "Вся информация про экологию",
+    "start_url": "/",
+    "background_color": "#FFF",
+    "theme_color": "#FFF",
+    "orientation": "any",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "images/favicon/apple-touch-icon.png",
+        "sizes": "512x512"
+      }
+    ]
+  }

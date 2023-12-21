@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="js/controls.js" defer></script>
+    <script src="js/upload_blog.js" defer></script>
+    
+    <title>Главная</title>
+</head>
+
+<body>
+
+    <header class="header_desktop">
+    
+        <div class="container">
+        
+           <div class="header_inner">
+               <img class="header_logo on" src="images/ic_logo_ecodiscovery.png"></img>
+                  
+               <div id="searchPanel_desktop" class="search_panel open">
+                <input class="input_view" placeholder="Найти всё об экологии" id="input_search_desktop" value="" onkeydown="checkForEnter(event, 'btnSearch')"/>
+                <img type="button" id="btnSearch_desktop" class="btn_search" src="images/ic_search.png" onclick="StartSearch()"/>
+                </div>
+
+               <a href="?p=profile&user=e35673e0216b42b4" id="profilePanel" class="profile_panel open">
+                <div id="user_name" class="user_name_up">user name</div>
+                <div id="short_name" class="short_name_up">@shortname</div>
+                <img class="user_icon_up"/>
+               </a>
+
+               <a href="?p=login" class="login_btn_up_panel">
+                <p class="login_btn_up_panel_text">Вход</p>
+               </a>
+            
+            </div>
+        
+        </div>
+    
+    </header>
+
+    <header id="header_mobile" class="header_mobile">
+
+        <div id="container_header_home_mobile" class="container">
+            <div class="header_inner">
+                <img id="logoMobile" class="header_logo on" src="images/ic_logo_ecodiscovery.png"/>
+
+                <div id="searchPanel_mobile" class="search_panel">
+                    <input class="input_view" placeholder="Найти всё об экологии" id="input_search_mobile" value="" onkeydown="checkForEnter(event, 'btnSearch_mobile')"/>
+                    <img type="button" id="btnSearch_mobile" class="btn_search" src="images/ic_search.png" onclick="StartSearchMobile()"/>
+                    </div>
+
+                <div onclick="openSearchPanel()" id="btnSearchOpenMobile" class="btn_search_open on">
+                    <img class="btn_search_open_ic" src="images/ic_search.png"/>
+                </div>
+                <div id="btnFilterMobile" class="btn_filter_open">
+                    <img class="btn_filter_open_ic" src="images/ic_filter_white.png"/>
+                </div>
+                <div onclick="closeSearchPanel()" id="btnCloseSearchMobile" class="btn_filter_open">
+                    <img class="btn_filter_open_ic" src="images/ic_close_white.png"/>
+                </div>
+            </div>
+        </div>
+
+        <div id="container_header_profile_mobile" class="container hide">
+            <div class="header_inner">
+                <div class="mobile_profile_text">Профиль</div>
+                <div id="btnFilterMobile" class="btn_filter_open on">
+                    <img class="btn_filter_open_ic" src="images/ic_filter_white.png"/>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="container main">
+
+        <div id="homePage" class="homepage open">
+            <div class="list_blogs_container">
+                <ul id="list_blogs" class="list_blogs">
+                    <li class="link_category">
+                        <p class="link_category_p">Экоблог</p>
+                    </li>
+                    <!-- <li class="link_blog">
+                        <a href="#" class="link_blog_a">
+                            <div class="link_blog_user_info_container">
+                                <div class="link_blog_user_avatar_container">
+                                    <img class="link_blog_user_avatar" src="images/favicon/android-chrome-512x512.png"/>
+                                </div>
+                                <div class="link_blog_user_name_data_container">
+                                    <p class="link_blog_user_name">Эко открытие official</p>
+                                    <p class="link_blog_data">02.12.23</p>
+                                </div>
+                                <div class="link_blog_subscribe_container">
+                                    
+                                </div>
+                            </div>
+                            <div class="link_blog_image_container">
+                                <img class="link_blog_preview_image" src="https://dairynews.today/upload/iblock/6e8/k53wyaf56jp1qzizi1n7xsb1zkdnnvaj/%D0%B8%D0%BB%D0%BB%D0%BE%D0%BD.JPG"/>
+                            </div>
+                            <div class="link_blog_name_container">
+                                <p class="link_blog_name">Илон Маск и экология</p>
+                            </div>
+                            <div class="link_blog_description_container">
+                                <p class="link_blog_description">Илон Маск, один из самых известных предпринимателей и новаторов в области технологий, также известен своим вкладом в решение экологических проблем.</p>
+                            </div>
+                            <div class="link_blog_feedback_container">
+                                <div class="link_blog_like_container">
+                                    <img class="link_blog_like" src="images/ic_like_eco_off.png"/>
+                                </div>
+                                <div class="link_blog_comment_container">
+                                    <img class="link_blog_comment" src="images/ic_comment_eco.png"/>
+                                </div>
+                                <div class="link_blog_repost_container">
+                                    <img class="link_blog_repost"/>
+                                </div>
+                                <div class="link_blog_watched_counter_container">
+                                    <p class="link_blog_watched_counter">10 минут</p>
+                                </div>
+                                <div class="link_blog_watched_icon_container">
+                                    <img class="link_blog_watched_icon" src="images/ic_views_eco.png"/>
+                                </div>
+                            </div>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="createpage">
+
+
+        </div>
+
+        <div id="profilePage" class="profilepage">
+            <div class="container_info_user">
+                
+                <div class="container_avatar">
+                    <img id="avatar_profile" class="avatar_profile" src="images/favicon/android-chrome-512x512.png"/>
+                </div>
+            </div>
+            <div id="c_u_n_p" class="container_user_name_profile">
+                <p id="u_n_p_t" class="user_name_profile_text">$user</p>
+                <img id="u_n_p_v" class="user_name_profile_verified" src="images/ic_verified.png"/>
+            </div>
+            <div class="container_followers">
+                <p id="followers_counter" class="followers_counter">-//-</p>
+            </div>
+
+            <div class="container_profile_feedback">
+                <!-- <div class="container_btn_subscribe_profile">
+                    <p class="btn_subscribe_profile_text">Подписаться</p>
+                </div> -->
+                <div id="c_b_a_p">
+                    <p id="c_b_a_p_t"></p>
+                </div>
+            </div>
+            <div class="profile_blogs_container">
+                <div class="profile_category_container">
+
+                </div>
+                <div class="list_blogs_container">
+                <ul id="list_blogs_profile" class="list_blogs">
+                    <li class="link_category">
+                        <p class="link_category_p">Экоблог</p>
+                    </li>
+                    <!-- <li class="link_blog">
+                        <a href="#" class="link_blog_a">
+                            <div class="link_blog_user_info_container">
+                                <div class="link_blog_user_avatar_container">
+                                    <img class="link_blog_user_avatar" src="images/favicon/android-chrome-512x512.png"/>
+                                </div>
+                                <div class="link_blog_user_name_data_container">
+                                    <p class="link_blog_user_name">Эко открытие official</p>
+                                    <p class="link_blog_data">02.12.23</p>
+                                </div>
+                                <div class="link_blog_subscribe_container">
+                                    
+                                </div>
+                            </div>
+                            <div class="link_blog_image_container">
+                                <img class="link_blog_preview_image" src="https://dairynews.today/upload/iblock/6e8/k53wyaf56jp1qzizi1n7xsb1zkdnnvaj/%D0%B8%D0%BB%D0%BB%D0%BE%D0%BD.JPG"/>
+                            </div>
+                            <div class="link_blog_name_container">
+                                <p class="link_blog_name">Илон Маск и экология</p>
+                            </div>
+                            <div class="link_blog_description_container">
+                                <p class="link_blog_description">Илон Маск, один из самых известных предпринимателей и новаторов в области технологий, также известен своим вкладом в решение экологических проблем.</p>
+                            </div>
+                            <div class="link_blog_feedback_container">
+                                <div class="link_blog_like_container">
+                                    <img class="link_blog_like" src="images/ic_like_eco_off.png"/>
+                                </div>
+                                <div class="link_blog_comment_container">
+                                    <img class="link_blog_comment" src="images/ic_comment_eco.png"/>
+                                </div>
+                                <div class="link_blog_repost_container">
+                                    <img class="link_blog_repost"/>
+                                </div>
+                                <div class="link_blog_watched_counter_container">
+                                    <p class="link_blog_watched_counter">10 минут</p>
+                                </div>
+                                <div class="link_blog_watched_icon_container">
+                                    <img class="link_blog_watched_icon" src="images/ic_views_eco.png"/>
+                                </div>
+                            </div>
+                        </a>
+                    </li> -->
+                </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="auth_mobile" class="auth_container_mobile">
+        <div class="auth_mobile_btn_close_container">
+            <div onclick="closeAuthMobilePanel()" id="btnCloseAuthMobile" class="btn_close_auth_mobile_open">
+                <img class="btn_filter_open_ic" src="images/ic_close_white.png"/>
+            </div>
+        </div>
+
+        <div class="select_type_auth_mobile">
+            <div id="log_mob_container" class="login_mobile_container open">
+                <div class="login_mobile_avatar_container">
+                    <img class="login_mobile_avatar" src="images/favicon/android-chrome-512x512.png"/>
+                </div>
+                <div class="login_mobile_logo_eco_container">
+                    <img class="login_mobile_logo" src="images/ic_logo_ecodiscovery.png"/>
+                </div>
+                <div id="log_mob_ie" class="login_mobile_input_email_container">
+                    <input id="mobile_email_login" type="email" class="login_mobile_input_email" placeholder="Email"/>
+                </div>
+                <div class="login_mobile_pass_container">
+                    <div id="log_mob_ip" class="login_mobile_input_pass_container">
+                        <input id="mobile_pass_login" type="password" class="login_mobile_input_pass" placeholder="Password" onkeydown="checkForEnter(event, 'btnLoginMobileText')"/>
+                    </div>
+                    <div class="login_mobile_input_pass_view_container">
+                        <img onclick="ViewPassMobile('mobile_pass_login','password','text')" class="login_mobile_input_pass_view" src="images/ic_views_eco.png"/>
+                    </div>
+                </div>
+                
+                <div class="login_mobile_btn_login_container">
+                    <p id="btnLoginMobileText" onclick="loginMobile()" class="login_mobile_btn_login_text on">Вход</p>
+                    <div id="btnLoginMobileLoading" class="loading_login_mobile_container">
+                        <svg class="d_l_i">
+                            <circle class="path_dli" cx="50"
+                            cy="50" r="50" fill="none" stroke-width="10"></circle>
+                        </svg>
+                    </div>
+                </div>
+                <div class="login_mobile_btn_open_signup_container">
+                    <p onclick="OpenRegisterPage()" class="login_mobile_btn_open_signup_text">Регистрация</p>
+                </div>
+            </div>
+
+
+
+            <div id="reg_mob_container" class="register_mobile_container">
+                <div class="reg_mobile_avatar_container">
+                    <img class="reg_mobile_avatar" src="images/favicon/android-chrome-512x512.png"/>
+                    <img class="reg_mobile_add_avatar_mask" src="images/ic_add_avatar_eco.png"/>
+                </div>
+                <div id="reg_mob_ich" class="login_mobile_input_email_container">
+                    <input id="mobile_name_reg" type="text" class="login_mobile_input_email" placeholder="Name channel"/>
+                </div>
+                <div id="reg_mob_ie" class="login_mobile_input_email_container">
+                    <input id="mobile_email_login" type="email" class="login_mobile_input_email" placeholder="Email"/>
+                </div>
+                <div class="login_mobile_pass_container">
+                    <div id="log_mob_ip" class="login_mobile_input_pass_container">
+                        <input id="mobile_pass_reg" type="password" class="login_mobile_input_pass" placeholder="Password" onkeydown="checkForEnter(event, 'btnLoginMobileText')"/>
+                    </div>
+                    <div class="login_mobile_input_pass_view_container">
+                        <img onclick="ViewPassMobile('mobile_pass_reg','password','text')" class="login_mobile_input_pass_view" src="images/ic_views_eco.png"/>
+                    </div>
+                </div>
+                <div class="login_mobile_pass_container">
+                    <div id="log_mob_ip" class="login_mobile_input_pass_container">
+                        <input id="mobile_pass_two_reg" type="password" class="login_mobile_input_pass" placeholder="Password repeat" onkeydown="checkForEnter(event, 'btnLoginMobileText')"/>
+                    </div>
+                    <div class="login_mobile_input_pass_view_container">
+                        <img onclick="ViewPassMobile('mobile_pass_two_reg','password','text')" class="login_mobile_input_pass_view" src="images/ic_views_eco.png"/>
+                    </div>
+                </div>
+                
+                <div class="login_mobile_btn_login_container">
+                    <p id="btnLoginMobileText" onclick="loginMobile()" class="login_mobile_btn_login_text on">Регистрация</p>
+                    <div id="btnLoginMobileLoading" class="loading_login_mobile_container">
+                        <svg class="d_l_i">
+                            <circle class="path_dli" cx="50"
+                            cy="50" r="50" fill="none" stroke-width="10"></circle>
+                        </svg>
+                    </div>
+                </div>
+                <div class="login_mobile_btn_open_signup_container">
+                    <p onclick="OpenRegisterPage()" class="login_mobile_btn_open_signup_text">Уже есть аккаунт? Войти</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom_panel_container">
+        <div class="bottom_panel">
+            <div id="l_b_b_h" onclick="OpenHomeMobile()" class="link_bottom_btn on">
+                <img class="link_bottom_img" src="images/ic_home_page_eco.png"/>
+                <div id="l_b_c_h" class="link_bottom_counter on"></div>
+            </div>
+            <div class="link_bottom_delimiter"></div>
+            <div class="link_bottom_btn">
+                <img class="link_bottom_img" src="images/ic_catalog_eco.png"/>
+                <div class="link_bottom_counter"></div>
+            </div>
+            <div class="link_bottom_delimiter"></div>
+            <div class="link_bottom_btn">
+                <img class="link_bottom_img" src="images/ic_add_blog_eco.png"/>
+                <div class="link_bottom_counter"></div>
+            </div>
+            <div class="link_bottom_delimiter"></div>
+            <div id="l_b_b_p" onclick="OpenProfileMobile()" class="link_bottom_btn">
+                <img class="link_bottom_img" src="images/ic_profile_page.png"/>
+                <div id="l_b_c_p" class="link_bottom_counter"></div>
+            </div>
+        </div>
+    </div>
+</body>
